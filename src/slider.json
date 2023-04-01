@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "image": "https://images.pexels.com/photos/1375736/pexels-photo-1375736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "title": "summer sales",
+            "desc": "dont compromise on style! get flat 30% for new arrivals",
+            "link": "shop now"
+        },
+        {
+            "id": 2,
+            "image": "https://images.pexels.com/photos/2285484/pexels-photo-2285484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "title": "loungewear love",
+            "desc": "dont compromise on style! get flat 30% for new arrivals",
+            "link": "shop now"
+        },
+        {
+            "id": 3,
+            "image": "https://images.pexels.com/photos/4947741/pexels-photo-4947741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "title": "best deals",
+            "desc": "dont compromise on style! get flat 30% for new arrivals",
+            "link": "view deals"
+        }
+    ]
+}
