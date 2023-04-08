@@ -22,7 +22,7 @@ body {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAD0FF", endColorstr="#E3E3E3", GradientType=1 );
 }
 
-h3 {
+h3, .logo2 {
   color: hsla(233, 100%, 90%, 1);
 
   /* background: linear-gradient(315deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
