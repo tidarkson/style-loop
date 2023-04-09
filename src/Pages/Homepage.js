@@ -14,10 +14,10 @@ const Homepage = () => {
                 <Announcement />
                 <Navbar/>
                 <Slider/>
-                {/* <Categories/>
+                <Categories/>
                 <Products/>
                 <Newsletter/>
-                <Footer/> */}
+                <Footer/>
             </section>
         </>
     )

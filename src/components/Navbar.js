@@ -14,7 +14,7 @@ function Navbar() {
                 </article>
 
                 <article className='cursor-pointer flex-grow'>
-                    <h1 className='uppercase text-2xl md:text-4xl text-slate-900 text-center font-bold tracking-widest'>showty💦</h1>
+                    <h1 className='uppercase text-2xl md:text-4xl text-slate-900 text-center xl:text-start font-bold tracking-widest'>showty💦</h1>
                 </article>
 
                 <article className='flex items-center gap-3'>

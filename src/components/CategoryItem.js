@@ -10,7 +10,7 @@ function CategoryItem({item}) {
             </div>
 
             <div className='flex flex-col text-white absolute top-0 left-0 items-center justify-center h-full w-full'>
-                <h3 className='uppercase text-slate-900 font-bold text-4xl'>{title}</h3>
+                <h3 className='uppercase text-center text-slate-900 font-bold text-4xl'>{title}</h3>
                 <button className='uppercase text-lg px-2 py-1 bg-red-800 text-white'>shop now</button>
             </div>
 
