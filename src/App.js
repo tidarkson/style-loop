@@ -1,15 +1,21 @@
+import Cart from "./Pages/Cart";
 import Homepage from "./Pages/Homepage";
+import Login from "./Pages/Login";
 import Product from "./Pages/Product";
 import ProductList from "./Pages/ProductList";
+import Register from "./Pages/Register";
 
 
 
 function App() {
   return (
     <>
-      {/* <Homepage/> */}
+      <Homepage/>
       {/* <ProductList/> */}
-      <Product/>
+      {/* <Product/> */}
+      {/* <Register/> */}
+      {/* <Login/> */}
+      {/* <Cart/> */}
     </>
   );
 }
