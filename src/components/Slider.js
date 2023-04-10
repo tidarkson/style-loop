@@ -30,9 +30,9 @@ const Slider = () => {
                                     <div key={index} className="relative slide flex flex-col md:flex-row items-center justify-center gap-5 w-screen transition-transform ease-out duration-500" style={{ transform: `translateX(-${slideIndex * 100}%)`, }}>
                                         <div><img src={image} alt="" className='w-screen' /></div>
                                         <div className='absolute xl:static top-0 left-0 flex flex-col justify-center items-center w-full h-full px-5 xl:px-20'>
-                                            <h3 className='uppercase xl:text-slate-900 text-4xl font-bold tracking-wider'>{title}</h3>
+                                            <h3 className='uppercase xl:text-slate-900 text-5xl font-bold tracking-wider'>{title}</h3>
                                             <p className='uppercase text-sm md:text-base text-white xl:text-slate-900 tracking-widest my-5'>{desc}</p>
-                                            <button className='uppercase text-white bg-red-800 tracking-wider px-2 py-1 font-bold'>{link}</button>
+                                            <button className='uppercase text-white bg-red-800 tracking-wider px-2 py-1'>{link}</button>
                                         </div>
                                     </div>
                                 )
