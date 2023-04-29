@@ -6,6 +6,8 @@ import Footer from '../components/Footer'
 import { products } from '../db'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import {Link, useParams} from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 
 function Product() {
@@ -17,8 +19,12 @@ function Product() {
             const newProduct = products.find((product)=>product.name === name)
             setSingleProduct(newProduct)
         }
+        AOS.init({duration:2000})
         findProduct()
     }, [name])
+
+    // useEffect(()=> {
+    // }, [])
 
     return (
         <>
@@ -26,7 +32,7 @@ function Product() {
             <Navbar />
             <section className="md:flex p-10 product">
                 <div className="flex-1 py-10">
-                    <img src={singleProduct.image} alt="" className="" />
+                    <img src={singleProduct.image} alt="" data-aos="fade-left"/>
                 </div>
                 <div className="flex-1 px-10">
                     <div>

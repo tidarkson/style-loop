@@ -1,12 +1,14 @@
 import React from 'react'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
+
 
 function Navbar() {
     return (
         <>
             <nav className='px-3 md:px-10 py-5 flex items-center justify-between'>
                 <article className='cursor-pointer'>
-                    <h1 className='uppercase text-2xl text-slate-900 text-center xl:text-start font-extrabold tracking-widest'><span className="logo">➰</span>style loop</h1>
+                  <Link to='/'><h1 className='uppercase text-2xl text-slate-900 text-center xl:text-start font-extrabold tracking-widest'><span className="logo">➰</span>style loop</h1></Link>  
                 </article>
 
                 <article className='hidden md:block'>

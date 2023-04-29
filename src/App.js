@@ -4,6 +4,7 @@ import Login from "./Pages/Login";
 import Product from "./Pages/Product";
 import ProductList from "./Pages/ProductList";
 import Register from "./Pages/Register";
+import ScrollToTop from "./components/ScrollToTop";
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+      <ScrollToTop/>
         <Routes>
           <Route path='/' element= {<Homepage/>} />
           <Route path='/product-list' element= {<ProductList/>} />

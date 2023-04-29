@@ -6,7 +6,7 @@ import 'aos/dist/aos.css'
 const Slider = () => {
 
     useEffect(()=> {
-        AOS.init({duration:2000})
+        AOS.init({duration:3000})
     }, [])
 
     return (
@@ -16,7 +16,7 @@ const Slider = () => {
                 <div className='md:flex gap-5'>
                     <div>
                         <div className='my-3'>
-                            <img src={data[0].image} alt="" className='md:w-3/5 mx-auto rounded-lg' data-aos="fade-in"/>
+                            <img src={data[0].image} alt="" className='md:w-3/5 mx-auto rounded-lg' data-aos="fade-up"/>
                         </div>
                         <div className='flex justify-center'>
                             <img src={data[1].image} alt="" className='w-44 mx-auto rounded-lg' data-aos="fade-left"/>
