@@ -4,9 +4,6 @@ function FilterContainer() {
     return (
         <>
             <section className='px-10 my-5'>
-                <div>
-                    <h2 className='font-bold text-2xl text-slate-900 uppercase'>PRODUCT LIST</h2>
-                </div>
                 <div className='flex justify-between'>
                     <div className='space-x-5'>
                         <label htmlFor="Filter Product" className='font-bold text-lg text-slate-900 uppercase'>Filter Products : </label>
@@ -35,7 +32,6 @@ function FilterContainer() {
                             <option value="color">Newest</option>
                             <option value="White">Price(asc)</option>
                             <option value="Black">Price(desc)</option>
-                            {/* <option value="Yellow">Yellow</option> */}
                         </select>
                     </div>
                 </div>

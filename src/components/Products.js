@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function Products() {
   return (
     <>
-      <div className='md:max-w-4xl my-3 md:px-16'>
+      <div className='md:max-w-4xl my-3 px-10 md:px-16'>
         <h3 className='uppercase text-slate-900 font-bold text-2xl'>selected products</h3>
         <p className='py-5'>From chic dresses to trendy tops, our collection has it all. Discover the latest fashion trends that are designed to make you look and feel at your best</p>
         <Link to='/product-list' className='butt text-white uppercase px-3 '>see all</Link>

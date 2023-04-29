@@ -24,14 +24,14 @@ function Product() {
         <>
             <Announcement />
             <Navbar />
-            <section className="flex p-10 product">
-                <div className="flex-1">
-                    <img src={singleProduct.image} alt="" className="w-3/4 h-4/5 cover mx-auto" />
+            <section className="md:flex p-10 product">
+                <div className="flex-1 py-10">
+                    <img src={singleProduct.image} alt="" className="" />
                 </div>
                 <div className="flex-1 px-10">
                     <div>
                         <h3 className="text-3xl font-bold text-slate-900 uppercase">{name}</h3>
-                        <p className='my-10'>Our collection features a variety of styles and colors to suit every taste and occasion. With attention to detail and quality craftsmanship, our handbags are sure to elevate any outfit and become a statement piece in your wardrobe. Invest in our handbag collection today and experience the perfect blend of style and functionality.</p>
+                        <p className='my-5 md:my-10'>Our collection features a variety of styles and colors to suit every taste and occasion. With attention to detail and quality craftsmanship, our handbags are sure to elevate any outfit and become a statement piece in your wardrobe. Invest in our handbag collection today and experience the perfect blend of style and functionality.</p>
                         <span className='text-3xl'>N{singleProduct.price}</span>
                     </div>
 

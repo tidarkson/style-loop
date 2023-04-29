@@ -6,7 +6,7 @@ function Categories() {
   return (
     <>
         <section className='pt-20'>
-        <div className='md:max-w-4xl my-3 md:px-16'>
+        <div className='md:max-w-4xl my-3 px-10 md:px-16'>
         <h3 className='uppercase text-slate-900 font-bold text-2xl'>Featured Collection</h3>
         <p className='py-5'>Our collection features high-quality products and craftsmanship, ensuring that each piece you purchase is not only beautiful but also built to last. With affordable prices and a wide range of options, we believe that everyone deserves to look and feel at their best</p>
         <button className='butt text-white uppercase px-3 '>see all</button>
