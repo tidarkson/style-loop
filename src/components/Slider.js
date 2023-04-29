@@ -1,8 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { data } from '../db'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Slider = () => {
 
+    useEffect(()=> {
+        AOS.init({duration:2000})
+    }, [])
 
     return (
         <>
@@ -11,11 +16,11 @@ const Slider = () => {
                 <div className='md:flex gap-5'>
                     <div>
                         <div className='my-3'>
-                            <img src={data[0].image} alt="" className='md:w-3/5 mx-auto rounded-lg' />
+                            <img src={data[0].image} alt="" className='md:w-3/5 mx-auto rounded-lg' data-aos="fade-in"/>
                         </div>
                         <div className='flex justify-center'>
-                            <img src={data[1].image} alt="" className='w-44 mx-auto rounded-lg' />
-                            <img src={data[2].image} alt="" className='w-48 mx-auto rounded-lg' />
+                            <img src={data[1].image} alt="" className='w-44 mx-auto rounded-lg' data-aos="fade-left"/>
+                            <img src={data[2].image} alt="" className='w-48 mx-auto rounded-lg' data-aos="fade-right"/>
                         </div>
 
                     </div>

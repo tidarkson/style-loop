@@ -1,10 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function CategoryItem({item}) {
     const { image, title} = item
+
+    useEffect(()=> {
+        AOS.init({duration:2000})
+    }, [])
+
   return (
     <>
-        <div className='flex-1 relative'>
+        <div className='flex-1 relative ' data-aos="fade-in">
             <div className='w-full h-full'>
                 <img src={image} alt="" className='w-full h-full cover'/>
             </div>
