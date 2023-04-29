@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    // colors: {
+    //   transparent: 'transparent',
+    //   current: 'currentColor',
+    //   butt:  "#5A0B4D"
+    // }
   },
   plugins: [],
 }

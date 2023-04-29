@@ -5,25 +5,27 @@
 
 body {
   margin: 0;
-  font-family: 'Arima', cursive;  -webkit-font-smoothing: antialiased;
+  font-family: 'Alegreya', serif;
+    -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #03254E;
+}
+
+.butt {
+  background-color: #007991;
 }
 
 
-.slide, .product, .announcement, .login, .cart {
-  background: hsla(233, 100%, 90%, 1);
+.product, .announcement, .login, .cart, .footer{
+  background-color: #BCD8C1
+}
 
-  background: linear-gradient(315deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
-  
-  background: -moz-linear-gradient(315deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
-  
-  background: -webkit-linear-gradient(315deg, hsla(233, 100%, 90%, 1) 0%, hsla(0, 0%, 89%, 1) 100%);
-  
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAD0FF", endColorstr="#E3E3E3", GradientType=1 );
+span {
+  color: #007991;
 }
 
 h3, .logo2 {
-  color: hsla(233, 100%, 90%, 1);
+  color: #03254E;
   
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAD0FF", endColorstr="#E3E3E3", GradientType=1 );
 

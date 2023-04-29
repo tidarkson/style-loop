@@ -19,10 +19,12 @@ function SingleProduct({ product }) {
                         <AiOutlineHeart className='text-lg' />
                     </div>
                 </div>
-                <div className='flex flex-col'>
+                <div>
+                     <div className='flex flex-col'>
                     <p className='font-bold text-xl'>{name}</p>
                     <p>NGN{price}</p>
-                    <p className='text-red-800 font-bold cursor-pointer underline'>{link}&rarr;</p>
+                    <p className='font-bold cursor-pointer underline'>{link}&rarr;</p>
+                </div>
                 </div>
             </div>
         </>

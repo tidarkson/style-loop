@@ -1,24 +1,24 @@
 export const data = [
     {
         "id": 1,
-        "image": "https://images.pexels.com/photos/1375736/pexels-photo-1375736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "image": "https://images.unsplash.com/photo-1612731486606-2614b4d74921?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=820&q=80",
         "title": "best deals",
         "desc": "dont compromise on style! get flat 30% for new arrivals",
         "link": "shop now"
     },
     {
-        "id": 2,
-        "image": "https://images.pexels.com/photos/7782138/pexels-photo-7782138.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "title": "lounge wear",
-        "desc": "dont compromise on style! get flat 30% for new arrivals",
-        "link": "shop now"
-    },
-    {
         "id": 3,
-        "image": "https://images.pexels.com/photos/4947741/pexels-photo-4947741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "image": "https://images.unsplash.com/photo-1626386699888-b8865823b279?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
         "title": "summer sales",
         "desc": "dont compromise on style! get flat 30% for new arrivals",
         "link": "view deals"
+    },
+    {
+        "id": 2,
+        "image": "https://images.unsplash.com/photo-1542513217-0b0eedf7005d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+        "title": "lounge wear",
+        "desc": "dont compromise on style! get flat 30% for new arrivals",
+        "link": "shop now"
     },
 
 ]
@@ -26,18 +26,18 @@ export const data = [
 export const categories = [
     {
         "id": 1,
-        "image": "https://images.unsplash.com/photo-1545291730-faff8ca1d4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        "title": "two piece",
+        "image": "https://images.unsplash.com/photo-1651744304883-468ea214716e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "title": "Luxury Footwear",
     },
     {
         "id": 2,
-        "image": "https://images.unsplash.com/photo-1622079402559-8b9a7fad367c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        "title": "lounge wear",
+        "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=404&q=80",
+        "title": "Parfum",
 
     },
     {
         "id": 3,
-        "image": "https://images.unsplash.com/photo-1622079401116-8317808352d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+        "image": "https://images.unsplash.com/photo-1574201635302-388dd92a4c3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
         "title": "luxury style",
     },
 
@@ -47,56 +47,56 @@ export const products = [
     {
         "id": 1,
         "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=405&q=80",
-        "name": "Zara Crop Top",
+        "name": "Crop Top",
         "price": 37000,
         "link": "Buy now"
     },
     {
         "id": 8,
-        "image": "https://images.unsplash.com/photo-1571859856639-d54ab2c18ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+        "image": "https://images.unsplash.com/photo-1594633313515-7ad9334a2349?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
         "name": "Forever 21",
         "price": 37000,
         "link": "Buy now"
     },
     {
         "id": 3,
-        "image": "https://images.unsplash.com/photo-1611312449545-94176309c857?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=356&q=80",
-        "name": "Barbow",
+        "image": "https://images.unsplash.com/photo-1594633313593-bab3825d0caf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "name": "Hand Bag",
         "price": 37000,
         "link": "Buy now"
     },
     {
         "id": 4,
-        "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
-        "name": "Esprit",
+        "image": "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "name": "Cargo Pant",
         "price": 37000,
         "link": "Buy now"
     },
     {
         "id": 5,
-        "image": "https://images.unsplash.com/photo-1618354691229-88d47f285158?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=415&q=80",
-        "name": "705 Shart",
+        "image": "https://images.unsplash.com/photo-1584370848010-d7fe6bc767ec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "name": "Jean Trousers",
         "price": 37000,
         "link": "Buy now"
     },
     {
         "id": 6,
-        "image": "https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=480&q=80",
-        "name": "Primark",
+        "image": "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "name": "Denim Dress",
         "price": 37000,
         "link": "Buy now"
     },
     {
         "id": 7,
-        "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80",
-        "name": "Topshop",
+        "image": "https://images.unsplash.com/photo-1621665421558-831f91fd0500?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "name": "Sneakers",
         "price": 37000,
         "link": "Buy now"
     },
     {
         "id": 9,
-        "image": "https://images.unsplash.com/photo-1600857062241-98e5dba7f214?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1398&q=80",
-        "name": "Prada",
+        "image": "https://images.unsplash.com/photo-1605348532760-6753d2c43329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "name": "Nike",
         "price": 37000,
         "link": "Buy now"
     },

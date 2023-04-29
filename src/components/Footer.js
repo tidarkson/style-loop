@@ -5,9 +5,9 @@ import { MdLocationPin, MdEmail } from 'react-icons/md'
 function Footer() {
     return (
         <>
-            <section className='md:flex items-center justify-center bg-red-800 text-slate-300 p-10'>
+            <section className='footer md:flex items-center justify-center p-10'>
                 <div className='flex-1 md:text-center'>
-                    <h1 className='logo2 uppercase text-4xl font-bold tracking-widest'>style loop➰</h1>
+                    <h1 className='logo2 uppercase text-2xl font-bold tracking-widest'>style loop➰</h1>
                     <p className='my-3   text-sm'>Get stylish with us. Our collection includes the latest styles and designs that will make you stand out from the crowd.</p>
                     <div className='flex items-center gap-3 md:justify-center'>
                         <FaFacebook className='text-2xl' />
