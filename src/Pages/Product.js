@@ -1,27 +1,38 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Announcement from '../components/Announcement'
 import Navbar from '../components/Navbar'
 import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
-import { categories } from '../db'
+import { products } from '../db'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
+import {Link, useParams} from 'react-router-dom'
+
 
 function Product() {
-    const image = categories[0].image
-    // console.log(categories[0].image)
+    const [singleProduct, setSingleProduct] = useState([])
+    const {name} = useParams()
+
+    useEffect(()=> {
+        const findProduct =()=>{
+            const newProduct = products.find((product)=>product.name === name)
+            setSingleProduct(newProduct)
+        }
+        findProduct()
+    }, [name])
+
     return (
         <>
             <Announcement />
             <Navbar />
             <section className="flex p-10 product">
                 <div className="flex-1">
-                    <img src={image} alt="" className="w-3/4 h-4/5 cover mx-auto" />
+                    <img src={singleProduct.image} alt="" className="w-3/4 h-4/5 cover mx-auto" />
                 </div>
                 <div className="flex-1 px-10">
                     <div>
-                        <h3 className="text-3xl font-bold text-slate-900 uppercase">prada milano</h3>
+                        <h3 className="text-3xl font-bold text-slate-900 uppercase">{name}</h3>
                         <p className='my-10'>Our collection features a variety of styles and colors to suit every taste and occasion. With attention to detail and quality craftsmanship, our handbags are sure to elevate any outfit and become a statement piece in your wardrobe. Invest in our handbag collection today and experience the perfect blend of style and functionality.</p>
-                        <span className='text-3xl'>$1800</span>
+                        <span className='text-3xl'>N{singleProduct.price}</span>
                     </div>
 
                     <div className='flex items-center justify-between w-3/4 my-10'>

@@ -6,7 +6,7 @@ function Announcement() {
     <>
       <section className='announcement p-1'>
         <Marquee className=''>
-          <p className='text-center text-white'>Super Deal! Free Shipping on orders over $50</p>
+          <p className='text-center'>Super Deal! Free Shipping on orders over $50</p>
         </Marquee>
       </section>
 
