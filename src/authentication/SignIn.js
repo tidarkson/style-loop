@@ -1,7 +1,7 @@
 import React from 'react'
 // import image from "https://images.unsplash.com/photo-1596993100471-c3905dafa78e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
 
-function Login() {
+function SignIn() {
   return (
     <>
             <section className='login w-screen h-screen flex items-center justify-center'>
@@ -23,4 +23,4 @@ function Login() {
   )
 }
 
-export default Login
+export default SignIn

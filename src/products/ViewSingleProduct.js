@@ -1,11 +1,8 @@
 import React, {useState, useEffect} from 'react'
-import Announcement from '../components/Announcement'
-import Navbar from '../components/Navbar'
-import Newsletter from '../components/Newsletter'
-import Footer from '../components/Footer'
+import Newsletter from '../homepage/components/Newsletter'
 import { products } from '../db'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-import {Link, useParams} from 'react-router-dom'
+import { useParams} from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -23,13 +20,8 @@ function Product() {
         findProduct()
     }, [name])
 
-    // useEffect(()=> {
-    // }, [])
-
     return (
         <>
-            <Announcement />
-            <Navbar />
             <section className="md:flex p-10 product">
                 <div className="flex-1 py-10">
                     <img src={singleProduct.image} alt="" data-aos="fade-left"/>
@@ -72,7 +64,6 @@ function Product() {
                 </div>
             </section>
             <Newsletter />
-            <Footer />
         </>
     )
 }

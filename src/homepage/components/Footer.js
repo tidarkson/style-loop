@@ -1,10 +1,12 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaPhoneAlt, FaPinterest } from 'react-icons/fa'
 import { MdLocationPin, MdEmail } from 'react-icons/md'
+import { Outlet } from 'react-router-dom'
 
 function Footer() {
     return (
         <>
+        <Outlet/>
             <section className='footer md:flex items-center justify-center p-10'>
                 <div className='flex-1 md:text-center'>
                     <h1 className='logo2 uppercase text-2xl font-bold tracking-widest'>style loop➰</h1>

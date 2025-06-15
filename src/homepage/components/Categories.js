@@ -1,5 +1,5 @@
 import React from 'react'
-import {categories} from '../db'
+import {categories} from '../../db'
 import CategoryItem from './CategoryItem'
 
 

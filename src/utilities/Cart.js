@@ -1,7 +1,7 @@
 import React from 'react'
-import Announcement from '../components/Announcement'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+import Announcement from '../homepage/components/Announcement'
+import Navbar from '../homepage/components/Navbar'
+import Footer from '../homepage/components/Footer'
 import { products } from '../db'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 

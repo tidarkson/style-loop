@@ -1,6 +1,6 @@
 import React from 'react'
-import { products } from '../db'
-import SingleProduct from './SingleProduct'
+import { products } from '../../db'
+import SingleProduct from './ProductCard'
 import { Link } from 'react-router-dom'
 
 function Products() {

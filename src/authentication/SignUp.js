@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Register() {
+function SignUp() {
   return (
     <>
         <section className='login w-screen h-screen flex items-center justify-center'>
@@ -23,4 +23,4 @@ function Register() {
   )
 }
 
-export default Register
+export default SignUp
