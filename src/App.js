@@ -1,29 +1,30 @@
 // import Cart from "./utilities/Cart";
 import Homepage from "./homepage/Homepage";
-// import Login from "./authentication/SignIn";
 import Product from "./products/ViewSingleProduct";
 import ProductList from "./products/ViewAllProducts";
 // import Register from "./authentication/SignUp";
-import ScrollToTop from "./utilities/ScrollToTop";
+import ScrollToTop from "./facilities/ScrollToTop";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import BounceLoader from "react-spinners/BounceLoader";
-import { useState, useEffect } from "react";
+// import BounceLoader from "react-spinners/BounceLoader";
+// import { useState } from "react";
 import Navbar from "./homepage/components/Navbar";
+import SignIn from "./authentication/SignIn";
+import Authentication from "./authentication/Authentication";
 // import Footer from "./homepage/components/Footer";
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 5000);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 5000);
+  // }, []);
 
   return (
     <>
-      {loading ? (
+      {/* {loading ? (
         <div className="flex flex-col items-center justify-center text-center w-full h-full">
           <BounceLoader
             color={"#BCD8C1"}
@@ -37,20 +38,19 @@ function App() {
           </h1>
         </div>
       ) : (
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Navbar />}>
-              <Route index element={<Homepage />} />
-              <Route path="/product-list" element={<ProductList />} />
-              <Route path="/:name" element={<Product />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      )}
-      {/* <Register/> */}
-      {/* <Login/> */}
-      {/* <Cart/> */}
+       
+      )} */}
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Navbar />}>
+            <Route index element={<Homepage />} />
+            <Route path="/product-list" element={<ProductList />} />
+            <Route path="/:name" element={<Product />} />
+          </Route>
+          <Route path="/auth" element={<Authentication />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

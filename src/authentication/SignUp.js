@@ -1,26 +1,172 @@
-import React from 'react'
+import {
+  Button,
+  Card,
+  Col,
+  ConfigProvider,
+  Form,
+  Input,
+  Row,
+  Space,
+  Typography,
+} from "antd";
+import { Icon } from "@iconify/react";
+import {
+  signInWithGooglePopup,
+  createUserDocumentFromAuth,
+} from "../utilities/firebase/Firebase.utils";
 
 function SignUp() {
+  const { Title, Text } = Typography;
+  const logGoogleUser = async () => {
+    const { user } = await signInWithGooglePopup();
+    createUserDocumentFromAuth(user);
+  };
+
   return (
     <>
-        <section className='login w-screen h-screen flex items-center justify-center'>
-          <div className='w-1/2'>
-          <h3 className='text-3xl font-semibold text-slate-900 uppercase'>Create an account</h3>
-            <form action="" className='flex flex-wrap gap-3'>
-                <input type="text" placeholder='First name'className='flex-1 max-w-1/2 p-2'/>
-                <input type="text" placeholder='Last Name'className='flex-1 max-w-1/2 p-2' />
-                <input type="email" placeholder='email' className='flex-1 max-w-1/2 p-2'/>
-                <input type="text" placeholder='username' className='flex-1 max-w-1/2 p-2'/>
-                <input type="password" placeholder='password' className='flex-1 max-w-1/2 p-2'/>
-                <input type="password" placeholder='Confirm password'className='flex-1 max-w-1/2 p-2' />
-                {/* <input type="checkbox" /> */}
-                <small>By creating an account, I consent to the processing of my data in accordance with the privacy policy</small>
-                <button className='px-3 py-1 text-white font-semibold bg-red-800 w-full uppercase'>sign up</button>
-            </form>
-          </div>
-        </section>
+      {/* <Text >Sign In to access our collections</Text> */}
+      <Row
+        gutter={[16, 16]}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 30,
+        }}
+      >
+        <Button
+          icon={<Icon icon="flat-color-icons:google" width={20} />}
+          onClick={logGoogleUser}
+        >
+          Sign Up With Google
+        </Button>
+        <Button
+          icon={
+            <Icon icon="cib:gmail" style={{ color: "#f23f3f" }} width={20} />
+          }
+        >
+          Sign Up With Email
+        </Button>
+      </Row>
+      <Form className="mt-4" layout="vertical">
+        <Row justify="center" align="middle">
+          <Col span={12} className="text-center" style={{ padding: "0px 8px" }}>
+            <Form.Item
+              name="firstName"
+              style={{ width: "100%" }}
+              rules={[
+                {
+                  required: true,
+                },
+              ]}
+            >
+              <Input
+                prefix={<Icon icon="solar:user-broken" width={14} />}
+                placeholder="First Name"
+              />
+            </Form.Item>
+          </Col>
+          <Col span={12} className="text-center" style={{ padding: "0px 8px" }}>
+            <Form.Item
+              name="lastName"
+              style={{ width: "100%" }}
+              rules={[
+                {
+                  required: true,
+                },
+              ]}
+            >
+              <Input
+                prefix={<Icon icon="solar:user-broken" width={14} />}
+                placeholder="Last Name"
+              />
+            </Form.Item>
+          </Col>
+        </Row>
+        <Row justify="center" align="middle">
+          <Col span={12} className="text-center" style={{ padding: "0px 8px" }}>
+            <Form.Item
+              name="email"
+              style={{ width: "100%" }}
+              rules={[
+                {
+                  required: true,
+                  // message: "Please input your email!",
+                },
+              ]}
+            >
+              <Input
+                prefix={<Icon icon="clarity:email-line" width={14} />}
+                placeholder="Email"
+              />
+            </Form.Item>
+          </Col>
+          <Col span={12} className="text-center" style={{ padding: "0px 8px" }}>
+            <Form.Item
+              name="phoneNumber"
+              style={{ width: "100%" }}
+              rules={[
+                {
+                  required: true,
+                },
+              ]}
+            >
+              <Input
+                prefix={<Icon icon="solar:phone-broken" width={14} />}
+                placeholder="Phone Number"
+              />
+            </Form.Item>
+          </Col>
+        </Row>
+        <Row justify="center" align="middle">
+          <Col span={12} className="text-center" style={{ padding: "0px 8px" }}>
+            <Form.Item
+              name="password"
+              style={{ width: "100%" }}
+              rules={[
+                {
+                  required: true,
+                },
+              ]}
+            >
+              <Input
+                prefix={<Icon icon="solar:lock-password-broken" width={14} />}
+                placeholder="Password"
+              />
+            </Form.Item>
+          </Col>
+          <Col span={12} className="text-center" style={{ padding: "0px 8px" }}>
+            <Form.Item
+              name="confirmPassword"
+              style={{ width: "100%" }}
+              rules={[
+                {
+                  required: true,
+                },
+              ]}
+            >
+              <Input
+                prefix={<Icon icon="solar:lock-password-broken" width={14} />}
+                placeholder="Confirm Password"
+              />
+            </Form.Item>
+          </Col>
+        </Row>
+        <Row justify="center" align="middle">
+          <Button
+            style={{
+              width: "96%",
+              backgroundColor: "#003049",
+              color: "#ffffff",
+            }}
+            color="#ffffff"
+          >
+            Create Account
+          </Button>
+        </Row>
+      </Form>
     </>
-  )
+  );
 }
 
-export default SignUp
+export default SignUp;

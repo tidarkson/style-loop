@@ -1,26 +1,102 @@
-import React from 'react'
-// import image from "https://images.unsplash.com/photo-1596993100471-c3905dafa78e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+import {
+  Button,
+  Card,
+  Col,
+  ConfigProvider,
+  Form,
+  Input,
+  Row,
+  Space,
+  Typography,
+} from "antd";
+import { Icon } from "@iconify/react";
+import {
+  signInWithGooglePopup,
+  createUserDocumentFromAuth,
+} from "../utilities/firebase/Firebase.utils";
 
 function SignIn() {
+  const { Title, Text } = Typography;
+  const logGoogleUser = async () => {
+    const { user } = await signInWithGooglePopup();
+    createUserDocumentFromAuth(user);
+  };
+
   return (
     <>
-            <section className='login w-screen h-screen flex items-center justify-center'>
-          <div className='w-1/4'>
-          <h3 className='text-3xl font-semibold text-slate-900 uppercase'>Sign in</h3>
-            <form action="" className='flex flex-col gap-3'>
-                <input type="text" placeholder='enter email or username'className='flex-1 max-w-1/2 p-2'/>
-                <input type="password" placeholder='password' className='flex-1 max-w-1/2 p-2'/>
-                <button className='px-3 py-1 text-white font-semibold bg-red-800 w-full uppercase'>sign in</button>
-                <a href="" className='uppercase'>forgot password?</a>
-            <a href="" className='uppercase'>create a new account</a>
-            </form>         
-          </div>
-          <div>
-            {/* <img src={image} alt="" /> */}
-          </div>
-        </section>
+ 
+          {/* <Text >Sign In to access our collections</Text> */}
+          <Row
+            gutter={[16, 16]}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 25,
+            }}
+          >
+            <Button
+              icon={<Icon icon="flat-color-icons:google" width={20} />}
+              onClick={logGoogleUser}
+            >
+              Sign In With Google
+            </Button>
+            <Button
+              icon={
+                <Icon
+                  icon="cib:gmail"
+                  style={{ color: "#f23f3f" }}
+                  width={20}
+                />
+              }
+            >
+              Sign In With Email
+            </Button>
+          </Row>
+          <Form className="mt-4" layout="vertical">
+            <Row justify="center" align="middle">
+              <Col span={24} className="text-center">
+                <Form.Item
+                  name="email"
+                  style={{ width: "100%" }}
+                  rules={[
+                    {
+                      required: true,
+                      // message: "Please input your email!",
+                    },
+                  ]}
+                >
+                  <Input
+                    prefix={<Icon icon="solar:user-broken" width={14} />}
+                    placeholder="Email"
+                  />
+                </Form.Item>
+                <Form.Item
+                  name="password"
+                  style={{ width: "100%" }}
+                  rules={[
+                    {
+                      required: true,
+                      // message: "Please input your password!",
+                    },
+                  ]}
+                >
+                  <Input
+                    prefix={
+                      <Icon icon="solar:lock-password-broken" width={14} />
+                    }
+                    placeholder="Password"
+                  />
+                </Form.Item>
+              </Col>
+            </Row>
+
+            <Row justify="center" align="middle">
+              <Button style={{ width: "100%", backgroundColor:"#003049", color: "#ffffff" }} color="#ffffff">Sign In</Button>
+            </Row>
+          </Form>
     </>
-  )
+  );
 }
 
-export default SignIn
+export default SignIn;

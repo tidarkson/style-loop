@@ -2,31 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 body {
   margin: 0;
-  font-family: 'Alegreya', serif;
-    -webkit-font-smoothing: antialiased;
+  font-family: "Ubuntu Mono", monospace;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #03254E;
+  color: #03254e;
 }
 
 .butt {
   background-color: #007991;
 }
 
-
-.product, .announcement, .login, .cart, .footer{
-  background-color: #BCD8C1
+.product,
+.announcement,
+.login,
+.cart,
+.footer {
+  background-color: #bcd8c1;
 }
 
-span {
-  color: #007991;
-}
+h3,
+.logo2 {
+  color: #03254e;
 
-h3, .logo2 {
-  color: #03254E;
-  
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAD0FF", endColorstr="#E3E3E3", GradientType=1 );
-
 }
