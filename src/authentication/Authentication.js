@@ -44,10 +44,16 @@ const Authentication = (props) => {
     >
       <Space className="flex items-center justify-center h-screen">
         <Card
-          style={{ 
+          style={{
             width: "105%",
-             margin: "auto", padding: 20 }}
-          title={activeTabKey === "signIn" ? "Welcome To Style Loop" : "Create An Account"}
+            margin: "auto",
+            padding: 20,
+          }}
+          title={
+            activeTabKey === "signIn"
+              ? "Welcome To Style Loop"
+              : "Create An Account"
+          }
           tabList={TabList}
           activeTabKey={activeTabKey}
           onTabChange={onTabChange}
