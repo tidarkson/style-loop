@@ -24,22 +24,6 @@ function App() {
 
   return (
     <>
-      {/* {loading ? (
-        <div className="flex flex-col items-center justify-center text-center w-full h-full">
-          <BounceLoader
-            color={"#BCD8C1"}
-            loading={loading}
-            size={150}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />
-          <h1 className="uppercase text-2xl text-slate-900 text-center xl:text-start font-extrabold tracking-widest">
-            <span className="logo">➰</span>style loop
-          </h1>
-        </div>
-      ) : (
-       
-      )} */}
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
@@ -47,8 +31,8 @@ function App() {
             <Route index element={<Homepage />} />
             <Route path="/product-list" element={<ProductList />} />
             <Route path="/:name" element={<Product />} />
-          </Route>
           <Route path="/auth" element={<Authentication />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

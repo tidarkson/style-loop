@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Link, Outlet } from "react-router-dom";
 import Announcement from "./Announcement";
-// import Footer from './Footer'
+import { UserContext } from "../../contexts/User.context";
+import { signOutUser } from "../../utilities/firebase/Firebase.utils";
 
 function Navbar() {
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+
+  const signOutHandler = async () => {
+    try {
+      signOutUser();
+      setCurrentUser(null);
+    } catch (error) {
+      console.error("Error signing out:", error);
+    }
+  };
+
   return (
     <>
       <Announcement />
@@ -33,13 +45,27 @@ function Navbar() {
 
         <article className="flex items-center gap-3">
           <ul className="flex flex-col md:flex-row items-center md:gap-3">
-            <li>
-              <Link to="/sign-in">
-                <button className="uppercase text-xs md:text-base px-3 py-1 border rounded">
-                  Sign in
-                </button>
-              </Link>
-            </li>
+            {currentUser ? (
+              <li>
+                <Link to="/auth">
+                  <button
+                    className="uppercase text-xs md:text-base px-3 py-1 border rounded"
+                    onClick={signOutHandler}
+                  >
+                    Sign Out
+                  </button>
+                </Link>
+              </li>
+            ) : (
+              <li>
+                <Link to="/auth">
+                  <button className="uppercase text-xs md:text-base px-3 py-1 border rounded">
+                    Sign In
+                  </button>
+                </Link>
+              </li>
+            )}
+
             <li>
               <button className="butt uppercase text-white text-xs md:text-base px-3 py-1 rounded hidden md:block">
                 see collections

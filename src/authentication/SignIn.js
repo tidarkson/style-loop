@@ -1,31 +1,27 @@
 import {
-  Button,
-  Card,
-  Col,
-  ConfigProvider,
-  Form,
-  Input,
-  Row,
-  Space,
-  Typography,
-} from "antd";
-import { Icon } from "@iconify/react";
-import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../utilities/firebase/Firebase.utils";
+import React, { useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "../contexts/User.context";
+import { Button, Col, Form, Input, Row } from "antd";
+import { Icon } from "@iconify/react";
 
 function SignIn() {
-  const { Title, Text } = Typography;
+  const { setCurrentUser, currentUser } = useContext(UserContext);
+  const navigate = useNavigate();
+
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
-    createUserDocumentFromAuth(user);
+    await createUserDocumentFromAuth(user);
   };
 
   const handleSubmit = async (formValues) => {
     try {
-      await signInAuthUserWithEmailAndPassword(formValues);
+      const { user } = await signInAuthUserWithEmailAndPassword(formValues);
+      setCurrentUser(user);
     } catch (err) {
       console.log(err);
     }

@@ -7,8 +7,9 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   signInWithEmailAndPassword,
+  signOut
 } from "firebase/auth";
-import { use } from "react";
+
 // TODO: Add SDKs for Firebase products that you want to use
 
 // Your web app's Firebase configuration
@@ -93,3 +94,5 @@ export const signInAuthUserWithEmailAndPassword = async (params) => {
 
   return await signInWithEmailAndPassword(auth, email, password);
 };
+
+export const signOutUser = async () => await signOut(auth);

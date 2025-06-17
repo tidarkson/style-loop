@@ -1,13 +1,15 @@
-import { Button, Col, Form, Input, Row, Typography } from "antd";
-import { Icon } from "@iconify/react";
 import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
   createAuthUserWithEmailAndPassword,
 } from "../utilities/firebase/Firebase.utils";
+import { useContext } from "react";
+import { UserContext } from "../contexts/User.context"; 
+import { Button, Col, Form, Input, Row } from "antd";
+import { Icon } from "@iconify/react";
 
 function SignUp() {
-  const { Title, Text } = Typography;
+  const { setCurrentUser } = useContext(UserContext);
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
     createUserDocumentFromAuth(user);
@@ -25,6 +27,7 @@ function SignUp() {
     try {
       const {user} = await createAuthUserWithEmailAndPassword(formValues);
       await createUserDocumentFromAuth(user, { displayName, phoneNumber });
+      setCurrentUser(user);
     } catch (err) {
       console.log(err);
     }
