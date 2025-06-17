@@ -4,15 +4,21 @@ import {
   createAuthUserWithEmailAndPassword,
 } from "../utilities/firebase/Firebase.utils";
 import { useContext } from "react";
-import { UserContext } from "../contexts/User.context"; 
+import { UserContext } from "../contexts/User.context";
 import { Button, Col, Form, Input, Row } from "antd";
 import { Icon } from "@iconify/react";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
-  const { setCurrentUser } = useContext(UserContext);
+  const navigate = useNavigate();
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
     createUserDocumentFromAuth(user);
+    if (user === null) {
+      alert("User not found, please sign up first.");
+    } else {
+      navigate("/");
+    }
   };
 
   const onSubmit = async (formValues) => {
@@ -25,9 +31,13 @@ function SignUp() {
       return;
     }
     try {
-      const {user} = await createAuthUserWithEmailAndPassword(formValues);
+      const { user } = await createAuthUserWithEmailAndPassword(formValues);
       await createUserDocumentFromAuth(user, { displayName, phoneNumber });
-      setCurrentUser(user);
+      if (user === null) {
+        alert("User not found, please sign up first.");
+      } else {
+        navigate("/");
+      }
     } catch (err) {
       console.log(err);
     }
