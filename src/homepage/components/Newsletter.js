@@ -9,7 +9,7 @@ function Newsletter() {
             <p className='xl:text-lg'>Get timely updates about your favourite products</p>
             <div className='flex gap-3'>
                 <input type="text" placeholder='your email' className='w-5/6 outline-none border border-2 px-5 rounded'/>
-                <button className='butt px-5 rounded'><BsSendFill className='text-white'/></button>
+                <button className='button-class px-5 rounded'><BsSendFill className='text-white'/></button>
             </div>
         </div>
         

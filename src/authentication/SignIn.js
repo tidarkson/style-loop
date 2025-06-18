@@ -10,18 +10,28 @@ import { Button, Col, Form, Input, Row } from "antd";
 import { Icon } from "@iconify/react";
 
 function SignIn() {
-  const { setCurrentUser, currentUser } = useContext(UserContext);
+  // const { setCurrentUser, currentUser } = useContext(UserContext);
   const navigate = useNavigate();
 
-  const logGoogleUser = async () => {
+  const signInGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
     await createUserDocumentFromAuth(user);
+    if (user === null) {
+      alert("User not found, please sign up first.");
+    } else {
+      navigate("/");
+    }
   };
 
   const handleSubmit = async (formValues) => {
     try {
       const { user } = await signInAuthUserWithEmailAndPassword(formValues);
-      setCurrentUser(user);
+
+      if (user === null) {
+        alert("User not found, please sign up first.");
+      } else {
+        navigate("/");
+      }
     } catch (err) {
       console.log(err);
     }
@@ -41,7 +51,7 @@ function SignIn() {
       >
         <Button
           icon={<Icon icon="flat-color-icons:google" width={20} />}
-          onClick={logGoogleUser}
+          onClick={signInGoogleUser}
         >
           Sign In With Google
         </Button>

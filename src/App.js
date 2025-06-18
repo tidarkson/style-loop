@@ -31,8 +31,8 @@ function App() {
             <Route index element={<Homepage />} />
             <Route path="/product-list" element={<ProductList />} />
             <Route path="/:name" element={<Product />} />
-          <Route path="/auth" element={<Authentication />} />
           </Route>
+          <Route path="/auth" element={<Authentication />} />
         </Routes>
       </BrowserRouter>
     </>

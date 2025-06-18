@@ -8,7 +8,7 @@ module.exports = {
     // colors: {
     //   transparent: 'transparent',
     //   current: 'currentColor',
-    //   butt:  "#5A0B4D"
+    //   button-class:  "#5A0B4D"
     // }
   },
   plugins: [],
