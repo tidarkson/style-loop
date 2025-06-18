@@ -25,11 +25,11 @@ function Navbar() {
       theme={{
         token: {
           // Seed Token
-          colorPrimary: "#778da9",
+          colorPrimary: "#0c6fff",
           borderRadius: 10,
           colorBorder: "#e9ecef",
           colorText: "#0d1b2a",
-          fontFamily: "Ubuntu Mono, monospace;",
+          fontFamily: "Cabinet Grotesk, sans-serif;",
 
           // Alias Token
           colorBgContainer: "#f8f9fa",
@@ -38,10 +38,7 @@ function Navbar() {
           Button: {
             contentFontSize: 12,
             defaultHoverColor: "#0c6fff"
-          },
-          Input: {
-            inputFontSize: 12,
-          },
+          }
         },
       }}
     >
