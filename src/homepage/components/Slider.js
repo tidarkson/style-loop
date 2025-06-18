@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { data } from "../../db";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Button } from "antd";
+import { Button, ConfigProvider } from "antd";
 
 const Slider = () => {
   useEffect(() => {
@@ -10,7 +10,28 @@ const Slider = () => {
   }, []);
 
   return (
-    <>
+    <ConfigProvider
+      theme={{
+        token: {
+          // Seed Token
+          colorPrimary: "#778da9",
+          borderRadius: 10,
+          colorBorder: "#e9ecef",
+          colorText: "#0d1b2a",
+          fontFamily: "Cabinet Grotesk, sans-serif;",
+
+          // Alias Token
+          colorBgContainer: "#f8f9fa",
+        },
+        components: {
+          Button: {
+            contentFontSize: 12,
+            // defaultHoverColor: "#0c6fff",
+            colorText: "#ffffff",
+          },
+        },
+      }}
+    >
       <section className="px-3 md:px-10 py-5">
         <div className="md:flex gap-5">
           <div>
@@ -40,7 +61,7 @@ const Slider = () => {
           <div className="flex flex-col items-end justify-center max-w-lg text-end">
             <div className="">
               <h3 className="text-7xl font-bold tracking-wider">
-                <span style={{color: "#03254e"}}>Step in with</span> <br />
+                <span style={{ color: "#03254e" }}>Step in with</span> <br />
                 <span>Style</span>
               </h3>
             </div>
@@ -53,7 +74,6 @@ const Slider = () => {
               <Button
                 style={{
                   backgroundColor: "#003049",
-                  color: "#ffffff",
                 }}
                 className="button-class"
               >
@@ -63,7 +83,7 @@ const Slider = () => {
           </div>
         </div>
       </section>
-    </>
+    </ConfigProvider>
   );
 };
 

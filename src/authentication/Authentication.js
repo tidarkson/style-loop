@@ -4,6 +4,7 @@ import { Card, ConfigProvider, Space } from "antd";
 import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import TabList from "./TabList.json";
+import Title from "antd/es/typography/Title";
 
 const Authentication = (props) => {
   const navigate = useNavigate();
@@ -23,11 +24,11 @@ const Authentication = (props) => {
       theme={{
         token: {
           // Seed Token
-          colorPrimary: "#778da9",
+          colorPrimary: "#0c6fff",
           borderRadius: 10,
           colorBorder: "#e9ecef",
           colorText: "#0d1b2a",
-          fontFamily: "Ubuntu Mono, monospace;",
+          fontFamily: "Cabinet Grotesk, sans-serif;",
 
           // Alias Token
           colorBgContainer: "#f8f9fa",
@@ -35,6 +36,7 @@ const Authentication = (props) => {
         components: {
           Button: {
             contentFontSize: 12,
+            defaultHoverColor: "#0c6fff",
           },
           Input: {
             inputFontSize: 12,
@@ -50,9 +52,13 @@ const Authentication = (props) => {
             padding: 20,
           }}
           title={
-            activeTabKey === "signIn"
-              ? "Welcome To Style Loop"
-              : "Create An Account"
+            activeTabKey === "signIn" ? (
+              <Title level={5} style={{ margin: "0px 0px 0px 0px" }}>
+               Welcome to Thrift<span style={{ color: "#0c6fff" }}>Vibe</span>
+              </Title>
+            ) : (
+              "Create An Account"
+            )
           }
           tabList={TabList}
           activeTabKey={activeTabKey}
